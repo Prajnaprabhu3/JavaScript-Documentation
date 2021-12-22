@@ -82,3 +82,38 @@ email.replace('a', 'b');
 
 
 
+// Numbers DataType 
+let radius = 10;
+// const pi = 3.14;
+
+// Math operators +, -, *, /, **, %
+let quotient = 10 / 2;
+let multiply = 3 * 4;
+let power = 2 ** 3;
+
+
+// order of operation  B I D M A S
+let result = 5 * (10 - 3) ** 2;
+
+// increment and decrement operator 
+let likes = 10;
+likes++; //increments by one
+likes--; // decrements by one
+
+// NaN -not a numbet
+// when something doesnt make sense
+5 / 'hello'; //get NaN
+
+
+// Concatenate Numbers 
+let resultt = "The blog has " + likes + " likes";
+console.log(resultt);
+
+
+
+
+
+
+
+
+
