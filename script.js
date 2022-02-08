@@ -10,7 +10,7 @@ console.log(age, year);
 const pi = 3.14;
 console.log(pi);
 
-//var- older keyword, that was there brfore let an dconst
+//var- older keyword, that was there before let and const
 var score = 75;
 comsole.log(score);
 
@@ -56,7 +56,7 @@ firstName.length //gives 3
 // 1. To convert characters to uppercase 
 fullName.toUpperCase();
 
-// 2. To convert the characters to lower case 
+// 2. To convert the characters to lowercase 
 fullName.toLowerCase();
 
 // 3. Method to index/position of a character or word 
@@ -101,7 +101,7 @@ likes++; //increments by one
 likes--; // decrements by one
 
 // NaN -not a numbet
-// when something doesnt make sense
+// when something does'nt make sense
 5 / 'hello'; //get NaN
 
 
@@ -135,7 +135,7 @@ console.log(html);
 
 
 
-// Arrays - used to collection of dataTypes
+// Arrays - used for collection of dataTypes
 let array = ['abc', 'def', 'ghi'];
 
 // To access different elements of an array 
@@ -314,9 +314,92 @@ else {
 }
 
 
+// example 2:
+const password = "@password";
+
+if (password.length >= 12 && password.includes('@')) {
+    console.log("the password is might strong");
+}
+else if (password.length >= 8 || password.includes('@')) {
+    console.log('The password is ling enough!');
+}
+else {
+    console.log("The password is not long enough");
+}
+
+// logical NOT (!)
+let user = false;
+
+if (!user) {
+    console.log("Hello");
+}
+
+console.log(!true); // prints false
+console.log(!false);// prints true
 
 
 
+// break and continue 
+const scores = [50, 25, 0, 30, 100, 20, 10];
+
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i] === 0) {
+        continue;
+    }
+
+    console.log("your score: ", scores[i]);
+
+
+    if (scores[i] === 100) {
+        console.log("Highest marks");
+        break;
+    }
+}
+
+
+
+// switch statements 
+const grade = 'D';
+
+switch (grade) {
+    case 'A':
+        console.log("Grade is A");
+        break;
+    case 'B':
+        console.log("Grade is B");
+        break;
+    case 'C':
+        console.log("Grade is C");
+        break;
+    case 'D':
+        console.log("Grade is D");
+        break;
+    case 'E':
+        console.log("Grade is E");
+        break;
+    case 'F':
+        console.log("Grade is F");
+        break;
+    default:
+        console.log("Not a valid grade");
+
+}
+
+
+// variables and block scope 
+let age1 = 30;
+if (true) {
+    let age1 = 40  //has scope within this if block only hence, though age1 is declared outside it allows declaration within the if block outside
+    let name = 'abc';
+    console.log("inside 1st code block: ", age, name); //both age and name will be printed
+
+    if (true) {
+        console.log("inside 2nd code block: ", age); //prints 40 , Incase a block doesnt have the variable it searches for the nearest variable value it can find
+    }
+
+}
+
+console.log("outside code block: ", age, name);//age(outer age1 declaration) will be printed but the name wont be printed
 
 
 
